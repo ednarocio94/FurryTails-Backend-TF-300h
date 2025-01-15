@@ -15,10 +15,10 @@ routerUser.get("/obtener", showUsers);
 
 // Ruta para actualizar un usuario por ID (PUT)
 // Agregar middleware de autenticación en el futuro (auth)
-routerUser.put("/actualizar/:id", auth("admin"), putUserById);
+routerUser.put("/actualizar/:id", putUserById);
 
 // Ruta para eliminar un usuario por ID (DELETE)
-routerUser.delete("/eliminar/:id", auth("admin"), deleteUserById);
+routerUser.delete("/eliminar/:id", deleteUserById);
 
 // Exportar el Router para usarlo en el resto de la aplicación
 export default routerUser;

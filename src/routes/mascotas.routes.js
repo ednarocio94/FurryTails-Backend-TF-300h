@@ -15,7 +15,7 @@ const petsrouter = express.Router();
 petsrouter.post('/', crearMascota);
 petsrouter.get('/', obtenerMascotas);
 petsrouter.get('/:id', obtenerMascotaPorId);
-petsrouter.put('/:id', auth("admin"), actualizarMascota);
-petsrouter.delete('/:id', auth("admin"), eliminarMascota);
+petsrouter.put('/:id', actualizarMascota);
+petsrouter.delete('/:id', eliminarMascota);
 
 export default petsrouter;

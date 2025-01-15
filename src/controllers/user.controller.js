@@ -56,7 +56,7 @@ export const showUsers = async (req, res) => {
         return res.status(200).json({
             mensaje: "Se encontraron usuarios almacenados",
             numeroUsuarios: users.length,
-            datos: users
+            
         });
 
     } catch (error) {

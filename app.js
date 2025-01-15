@@ -14,7 +14,7 @@ const app = express();
 dotenv.config();
 connectionMongo();
 
-const port = process.env.PORT || 3000;
+
 app.use(cors())
 
 // Middleware
@@ -25,11 +25,7 @@ app.use("/mascotas", petsrouter);
 app.use("/loginAdmin", loginAdminRouter);
 app.use("/loginUser", loginUserRouter);
 
-// 3. Iniciar el servidor
-app.listen(port, ()=>{
-    console.log("El servidor está ejecutándose correctamente, en el puerto ", port);
-});
-
+export default app;
 
 
 
